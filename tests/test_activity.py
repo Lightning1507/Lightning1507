@@ -28,7 +28,7 @@ class ActivityTests(unittest.TestCase):
     def test_private_contributions_are_excluded(self):
         snapshot = activity.build_snapshot(response(), "Lightning1507", NOW)
         self.assertEqual(set(snapshot["metrics"].values()), {7})
-        self.assertNotIn("999", activity.render_svg(snapshot))
+        self.assertNotIn("999", activity.render_activity(snapshot))
 
     def test_empty_public_activity_is_a_real_zero(self):
         payload = response()
@@ -72,11 +72,12 @@ class ActivityTests(unittest.TestCase):
         now = datetime(2027, 1, 1, 0, 1, tzinfo=timezone.utc)
         snapshot = activity.build_snapshot(response(), "Lightning1507", now)
         self.assertEqual(snapshot["period_start"], "2027-01-01T00:00:00Z")
-        self.assertIn("2027", activity.render_svg(snapshot))
+        self.assertIn("2027", activity.render_activity(snapshot))
 
     def test_failed_fetch_preserves_previous_files(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
+            (root / "README.md").write_text("# Lightning\n\n<!-- activity:start -->\nold\n<!-- activity:end -->\n", encoding="utf-8")
             activity.write_outputs(activity.build_snapshot(response(), "Lightning1507", NOW), root)
             before = {str(p.relative_to(root)): p.read_bytes() for p in root.rglob("*") if p.is_file()}
             with patch.object(activity, "fetch_payload", side_effect=RuntimeError("offline")):
@@ -84,6 +85,32 @@ class ActivityTests(unittest.TestCase):
                     activity.refresh("Lightning1507", "not-a-real-token", root, NOW)
             after = {str(p.relative_to(root)): p.read_bytes() for p in root.rglob("*") if p.is_file()}
             self.assertEqual(before, after)
+
+    def test_update_preserves_text_outside_the_activity_block(self):
+        original = "# Lightning\nMy introduction.\n<!-- activity:start -->\nold counts\n<!-- activity:end -->\nMy projects.\n"
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "README.md").write_text(original, encoding="utf-8")
+            activity.write_outputs(activity.build_snapshot(response(), "Lightning1507", NOW), root)
+            updated = (root / "README.md").read_text(encoding="utf-8")
+            self.assertTrue(updated.startswith("# Lightning\nMy introduction.\n"))
+            self.assertTrue(updated.endswith("\nMy projects.\n"))
+            self.assertNotIn("old counts", updated)
+            self.assertIn("**7** commits", updated)
+
+    def test_missing_or_duplicate_markers_preserve_both_outputs(self):
+        for content in ["No marker", "<!-- activity:start -->", "<!-- activity:end -->",
+                        "<!-- activity:end --><!-- activity:start -->",
+                        "<!-- activity:start --><!-- activity:end --><!-- activity:start --><!-- activity:end -->"]:
+            with self.subTest(content=content), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                (root / "README.md").write_text(content, encoding="utf-8")
+                (root / "data").mkdir()
+                (root / "data" / "activity.json").write_text("previous data", encoding="utf-8")
+                with self.assertRaises(ValueError):
+                    activity.write_outputs(activity.build_snapshot(response(), "Lightning1507", NOW), root)
+                self.assertEqual((root / "README.md").read_text(encoding="utf-8"), content)
+                self.assertEqual((root / "data" / "activity.json").read_text(encoding="utf-8"), "previous data")
 
     def test_saved_snapshot_cannot_change_scope_or_inject_markup(self):
         snapshot = activity.build_snapshot(response(), "Lightning1507", NOW)

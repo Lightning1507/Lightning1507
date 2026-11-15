@@ -33,11 +33,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python scripts/update_activity.py --username Lightning1507
-      - name: Commit updated card
+      - name: Commit updated summary
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/activity.svg data/activity.json
+          git add README.md data/activity.json
           if ! git diff --cached --quiet; then
             git commit -m 'chore: refresh public GitHub activity'
             git push

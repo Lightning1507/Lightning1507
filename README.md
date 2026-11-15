@@ -1,37 +1,27 @@
-<p align="center">
-  <img src="assets/banner.svg" alt="Lightning — building for web and mobile" width="100%" />
-</p>
+# Lightning
 
-I’m **Lightning**, a HUST student building web and mobile applications. I work with **TypeScript and React** on the web, **Flutter and Dart** on mobile, and explore native Windows development with **C++**.
+HUST student working on **web and mobile apps**. Mostly TypeScript, React and Flutter, with some C++ on Windows.
 
-I’m interested in how an application fits together: its interface, APIs, real-time behavior, and the details that make it useful in everyday work.
+### Projects
 
-### Selected work
+| Project | What I work on |
+| :--- | :--- |
+| **[CoLearnia](https://github.com/Lightning1507/CoLearnia)** | A collaborative learning platform. Real-time communication, testing and code review as part of the team. |
+| **KPI Buddy** | The Flutter app in a team task/KPI management project: employee tasks, attention items and personal skills. Source is private. |
+| **[KaitenCam](https://github.com/Lightning1507/KaitenCam)** | A Windows virtual camera that mirrors webcam video, built with C++ and Media Foundation. |
 
-**[CoLearnia ↗](https://github.com/Lightning1507/CoLearnia)** · Collaborative learning
+### Stack
 
-A team project for online learning, shared workspaces, and real-time group discussion. My work includes real-time communication research and implementation, testing, and code review.
+**Web** &nbsp; TypeScript · React · Socket.IO · WebRTC<br>
+**Mobile** &nbsp; Flutter · Dart · Riverpod<br>
+**Windows** &nbsp; C++ · Win32 · Media Foundation
 
-`TypeScript` `React` `Socket.IO` `WebRTC`
+### GitHub activity
 
-**KPI Buddy** · Employee mobile application
+<!-- activity:start -->
+**343** commits · **135** pull requests · **104** reviewed PRs · **2** issues
 
-My mobile work within a team task and KPI management project: assigned tasks, items needing attention with supporting evidence, and personal skills across projects. Built with Flutter; source code is private.
+<sub>2026 · Public repositories · Updated 15 Nov, 19:09 UTC · [About these counts](docs/activity.md)</sub>
+<!-- activity:end -->
 
-`Flutter` `Dart` `Riverpod` `REST APIs`
-
-**[KaitenCam ↗](https://github.com/Lightning1507/KaitenCam)** · Native Windows utility
-
-A Windows virtual camera project that mirrors webcam video horizontally, using Media Foundation and a system tray application.
-
-`C++` `Win32` `Media Foundation`
-
-### On GitHub
-
-<a href="https://github.com/Lightning1507?tab=overview">
-  <img src="assets/activity.svg" alt="Current-year public GitHub contributions: commits, pull requests, issues, and reviewed pull requests. See the image for counts, period, and update time." width="100%" />
-</a>
-
-[Pull requests](https://github.com/pulls?q=is%3Apr+author%3ALightning1507+is%3Apublic) &nbsp; / &nbsp; [Reviews](https://github.com/pulls?q=is%3Apr+reviewed-by%3ALightning1507+-author%3ALightning1507+is%3Apublic) &nbsp; / &nbsp; [Issues](https://github.com/issues?q=is%3Aissue+author%3ALightning1507+is%3Apublic) &nbsp; / &nbsp; [Repositories](https://github.com/Lightning1507?tab=repositories)
-
-<sub>Public contributions this year · Updated daily · Reviews count reviewed PRs. [How these numbers work](docs/activity.md).</sub>
+[Pull requests](https://github.com/pulls?q=is%3Apr+author%3ALightning1507+is%3Apublic) · [Reviews](https://github.com/pulls?q=is%3Apr+reviewed-by%3ALightning1507+-author%3ALightning1507+is%3Apublic) · [Repositories](https://github.com/Lightning1507?tab=repositories)

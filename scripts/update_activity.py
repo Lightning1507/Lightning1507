@@ -1,4 +1,4 @@
-"""Generate an annual public-contributions card using the GitHub GraphQL API."""
+"""Update the README's annual public-contribution summary using GitHub GraphQL."""
 
 import argparse
 import json
@@ -7,7 +7,6 @@ import re
 import sys
 import tempfile
 from datetime import datetime, timezone
-from html import escape
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -103,36 +102,20 @@ def validate_snapshot(snapshot):
         raise ValueError("Invalid saved contribution snapshot.") from error
 
 
-def render_svg(snapshot):
+def render_activity(snapshot):
     validate_snapshot(snapshot)
     year = snapshot["period_start"][:4]
-    updated = snapshot["updated_at"].replace("T", " ").replace("Z", " UTC")
-    labels = {"commits": "Commit contributions", "pull_requests": "Pull requests",
-              "issues": "Issues", "reviewed_prs": "Reviewed PRs"}
-    cards = []
-    for index, (metric, label) in enumerate(labels.items()):
-        x = 32 + (index % 2) * 378
-        y = 90 + (index // 2) * 110
-        count = format(snapshot["metrics"][metric], ",")
-        cards.append(f'''<g transform="translate({x} {y})">
-          <rect width="358" height="96" rx="12" fill="#122335" stroke="#243c50"/>
-          <rect x="0" y="20" width="3" height="56" rx="1.5" fill="{'#f4c65b' if index == 0 else '#70d8e4'}"/>
-          <text x="22" y="43" fill="#f0f6fc" font-size="38" font-weight="700">{count}</text>
-          <text x="22" y="75" fill="#b5cedd" font-size="21">{label}</text>
-        </g>''')
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="800" height="366" viewBox="0 0 800 366" role="img" aria-labelledby="title desc">
-      <title id="title">{escape(snapshot['username'])} — public GitHub activity, {year}</title>
-      <desc id="desc">{escape('; '.join(f'{labels[k]}: {v}' for k, v in snapshot['metrics'].items()))}. January 1 through {updated}.</desc>
-      <rect width="800" height="366" rx="16" fill="#0d1826"/>
-      <g font-family="Segoe UI,Arial,sans-serif">
-        <text x="32" y="43" fill="#f0f6fc" font-size="25" font-weight="650">A year of building</text>
-        <text x="768" y="43" text-anchor="end" fill="#f4c65b" font-size="25" font-weight="650">{year}</text>
-        <text x="32" y="71" fill="#b5cedd" font-size="17">January 1 to date · Public repositories only</text>
-        {''.join(cards)}
-        <text x="32" y="340" fill="#a5bdcf" font-size="16">Updated {updated}</text>
-      </g>
-    </svg>
-'''
+    updated = datetime.strptime(snapshot["updated_at"], "%Y-%m-%dT%H:%M:%SZ")
+    # Explicit month names make rendering identical on local and CI locales.
+    month = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")[updated.month - 1]
+    date = f"{updated.day} {month}, {updated:%H:%M} UTC"
+    counts = snapshot["metrics"]
+    return (
+        f"**{counts['commits']:,}** commits · **{counts['pull_requests']:,}** pull requests · "
+        f"**{counts['reviewed_prs']:,}** reviewed PRs · **{counts['issues']:,}** issues\n\n"
+        f"<sub>{year} · Public repositories · Updated {date} · "
+        "[About these counts](docs/activity.md)</sub>"
+    )
 
 
 def atomic_write(path, content):
@@ -150,11 +133,19 @@ def atomic_write(path, content):
 
 
 def write_outputs(snapshot, output_dir):
-    svg = render_svg(snapshot)
+    summary = render_activity(snapshot)
+    readme_path = output_dir / "README.md"
+    readme = readme_path.read_text(encoding="utf-8")
+    start, end = "<!-- activity:start -->", "<!-- activity:end -->"
+    if readme.count(start) != 1 or readme.count(end) != 1 or readme.index(start) > readme.index(end):
+        raise ValueError("README must contain exactly one ordered activity marker pair.")
+    prefix, rest = readme.split(start, 1)
+    _, suffix = rest.split(end, 1)
+    updated_readme = prefix + start + "\n" + summary + "\n" + end + suffix
     # Whitelist the persisted fields so raw API payloads can never be published.
     public = {key: snapshot[key] for key in
               ("username", "scope", "period_start", "period_end", "updated_at", "metrics")}
-    atomic_write(output_dir / "assets" / "activity.svg", svg)
+    atomic_write(readme_path, updated_readme)
     atomic_write(output_dir / "data" / "activity.json", json.dumps(public, indent=2) + "\n")
 
 
