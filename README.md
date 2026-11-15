@@ -2,7 +2,21 @@
 
 HUST student working on **web and mobile apps**. Mostly TypeScript, React and Flutter, with some C++ on Windows.
 
-### Projects
+## Tech I use
+
+<p>
+  <a href="https://www.typescriptlang.org/"><img src="assets/tech/typescript.svg" alt="TypeScript" title="TypeScript" width="40" height="40" /></a>&nbsp;&nbsp;
+  <a href="https://react.dev/"><img src="assets/tech/react.svg" alt="React" title="React" width="40" height="40" /></a>&nbsp;&nbsp;
+  <a href="https://flutter.dev/"><img src="assets/tech/flutter.svg" alt="Flutter" title="Flutter" width="40" height="40" /></a>&nbsp;&nbsp;
+  <a href="https://dart.dev/"><img src="assets/tech/dart.svg" alt="Dart" title="Dart" width="40" height="40" /></a>&nbsp;&nbsp;
+  <a href="https://isocpp.org/"><img src="assets/tech/cplusplus.svg" alt="C++" title="C++" width="40" height="40" /></a>
+</p>
+
+**Web** &nbsp; TypeScript · React · Socket.IO · WebRTC<br>
+**Mobile** &nbsp; Flutter · Dart · Riverpod<br>
+**Windows** &nbsp; C++ · Win32 · Media Foundation
+
+## Projects
 
 | Project | What I work on |
 | :--- | :--- |
@@ -10,13 +24,12 @@ HUST student working on **web and mobile apps**. Mostly TypeScript, React and Fl
 | **KPI Buddy** | The Flutter app in a team task/KPI management project: employee tasks, attention items and personal skills. Source is private. |
 | **[KaitenCam](https://github.com/Lightning1507/KaitenCam)** | A Windows virtual camera that mirrors webcam video, built with C++ and Media Foundation. |
 
-### Stack
+## Currently working on
 
-**Web** &nbsp; TypeScript · React · Socket.IO · WebRTC<br>
-**Mobile** &nbsp; Flutter · Dart · Riverpod<br>
-**Windows** &nbsp; C++ · Win32 · Media Foundation
+- **CoLearnia:** real-time session behavior and integration testing.
+- **KPI Buddy:** connecting the employee mobile experience to backend APIs, with task context and personal skills.
 
-### GitHub activity
+## GitHub activity
 
 <!-- activity:start -->
 **343** commits · **135** pull requests · **104** reviewed PRs · **2** issues
