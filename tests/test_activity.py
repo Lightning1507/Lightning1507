@@ -195,10 +195,10 @@ class ActivityTests(unittest.TestCase):
     def test_picture_urls_change_when_panel_data_changes(self):
         import re
         snapshot = activity.build_snapshot(response(), "Lightning1507", NOW)
-        before = re.findall(r'assets/activity-[^" ]+\.svg\?v=[0-9a-f]+', activity.render_activity(snapshot))
+        before = re.findall(r'assets/activity-[^" ]+-[0-9a-f]{12}\.svg', activity.render_activity(snapshot))
         self.assertEqual(len(before), 4)
         snapshot["metrics"]["commits"] += 1
-        after = re.findall(r'assets/activity-[^" ]+\.svg\?v=[0-9a-f]+', activity.render_activity(snapshot))
+        after = re.findall(r'assets/activity-[^" ]+-[0-9a-f]{12}\.svg', activity.render_activity(snapshot))
         self.assertEqual(len(after), 4)
         self.assertTrue(all(old != new for old, new in zip(before, after)))
 

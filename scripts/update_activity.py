@@ -167,6 +167,12 @@ def validate_snapshot(snapshot):
         raise ValueError("Invalid saved contribution snapshot.") from error
 
 
+def panel_asset(snapshot, theme, mobile=False):
+    svg = render_panel(snapshot, theme, mobile)
+    digest = hashlib.sha256(svg.encode("utf-8")).hexdigest()[:12]
+    return f"activity-{theme}{'-mobile' if mobile else ''}-{digest}.svg", svg
+
+
 def render_activity(snapshot):
     validate_snapshot(snapshot)
     year = snapshot["period_start"][:4]
@@ -176,11 +182,8 @@ def render_activity(snapshot):
     date = f"{updated.day} {month}, {updated:%H:%M} UTC"
     counts = snapshot["metrics"]
     def panel_url(theme, mobile=False):
-        digest = hashlib.sha256(render_panel(snapshot, theme, mobile).encode("utf-8")).hexdigest()[:12]
-        # GitHub's /raw/ redirect drops query parameters. Use the raw host directly
-        # so the content version survives and cached images cannot mask a new panel.
-        return (f"https://raw.githubusercontent.com/{snapshot['username']}/{snapshot['username']}/main/"
-                f"assets/activity-{theme}{'-mobile' if mobile else ''}.svg?v={digest}")
+        # Put the digest in the path: redirects and image CDNs may ignore queries.
+        return "assets/" + panel_asset(snapshot, theme, mobile)[0]
     return (
         '<picture>\n'
         f'  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="{panel_url("dark", True)}" />\n'
@@ -313,8 +316,8 @@ def atomic_write(path, content):
 
 def write_outputs(snapshot, output_dir):
     summary = render_activity(snapshot)
-    panels = {f"activity-{theme}{'-mobile' if mobile else ''}.svg": render_panel(snapshot, theme, mobile)
-              for theme in ("light", "dark") for mobile in (False, True)}
+    panels = dict(panel_asset(snapshot, theme, mobile)
+                  for theme in ("light", "dark") for mobile in (False, True))
     readme_path = output_dir / "README.md"
     readme = readme_path.read_text(encoding="utf-8")
     start, end = "<!-- activity:start -->", "<!-- activity:end -->"
@@ -328,6 +331,10 @@ def write_outputs(snapshot, output_dir):
               ("username", "scope", "period_start", "period_end", "updated_at", "metrics", "months", "extras")}
     for name, content in panels.items():
         atomic_write(output_dir / "assets" / name, content)
+    for old in (output_dir / "assets").glob("activity-*.svg"):
+        if (old.name not in panels and old.is_file()
+                and re.fullmatch(r"activity-(?:light|dark)(?:-mobile)?(?:-[0-9a-f]{12})?\.svg", old.name)):
+            old.unlink()
     atomic_write(readme_path, updated_readme)
     atomic_write(output_dir / "data" / "activity.json", json.dumps(public, indent=2) + "\n")
 
