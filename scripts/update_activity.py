@@ -189,7 +189,7 @@ def render_panel(snapshot, theme="light", mobile=False):
         ("#0d1117", "#e6edf3", "#8b949e", "#30363d", "#21262d", "#2964a6", "#388bfd")
         if dark else ("#ffffff", "#1f2328", "#59636e", "#d1d9e0", "#eaeef2", "#80b7f4", "#0969da")
     )
-    width, height = (400, 420) if mobile else (800, 380)
+    width, height = (400, 420) if mobile else (800, 400)
     left, right, top, bottom = (37, 379, 106, 253) if mobile else (45, 774, 90, 244)
     plot_height, step = bottom-top, (right-left)/12
     peak = max(week["commits"] for week in snapshot["weeks"])
