@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="550" viewBox="0 0 800 550" role="img" aria-labelledby="title desc">
 <title id="title">GitHub activity: annual totals and 6 months of public contributions</title>
-<desc id="desc">2026-06: 93 commits, 34 opened PRs, 15 reviewed PRs; 2026-07: 24 commits, 11 opened PRs, 0 reviewed PRs; 2026-08: 36 commits, 19 opened PRs, 0 reviewed PRs; 2026-09: 2 commits, 0 opened PRs, 0 reviewed PRs; 2026-10: 6 commits, 2 opened PRs, 6 reviewed PRs; 2026-11: 32 commits, 21 opened PRs, 44 reviewed PRs. Current month in progress. Annual merged PRs: 108 of 135. Public repos contributed to this year: 12.</desc>
+<desc id="desc">2026-06: 93 commits, 34 opened PRs, 15 reviewed PRs; 2026-07: 24 commits, 11 opened PRs, 0 reviewed PRs; 2026-08: 36 commits, 19 opened PRs, 0 reviewed PRs; 2026-09: 2 commits, 0 opened PRs, 0 reviewed PRs; 2026-10: 6 commits, 2 opened PRs, 6 reviewed PRs; 2026-11: 33 commits, 21 opened PRs, 44 reviewed PRs. Current month in progress. Annual merged PRs: 108 of 135. Public repos contributed to this year: 12.</desc>
 <rect x=".5" y=".5" width="799" height="549" rx="8" fill="#0d1117" stroke="#30363d"/>
 <g font-family="Segoe UI,Arial,sans-serif">
 <text x="26" y="35" font-size="21" fill="#e6edf3" font-weight="600" text-anchor="start">GitHub activity</text>
 <text x="778" y="35" font-size="13" fill="#8b949e" font-weight="400" text-anchor="end">2026 · Public only</text>
-<text x="26" y="93" font-size="32" fill="#e6edf3" font-weight="600" text-anchor="start">351</text>
+<text x="26" y="93" font-size="32" fill="#e6edf3" font-weight="600" text-anchor="start">352</text>
 <text x="26" y="115" font-size="13" fill="#8b949e" font-weight="400" text-anchor="start">Commits</text>
 <text x="219" y="93" font-size="32" fill="#e6edf3" font-weight="600" text-anchor="start">135</text>
 <text x="219" y="115" font-size="13" fill="#8b949e" font-weight="400" text-anchor="start">Pull requests</text>
@@ -57,10 +57,10 @@
 <rect x="564.96" y="377.08" width="55.58" height="4.68" fill="#a371f7"/>
 <text x="592.75" y="369.08" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">14</text>
 <text x="592.75" y="413" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">Oct</text>
-<rect x="685.79" y="363.04" width="55.58" height="24.96" fill="#388bfd"/>
-<rect x="685.79" y="346.66" width="55.58" height="16.38" fill="#3fb950"/>
-<rect x="685.79" y="312.34" width="55.58" height="34.32" fill="#a371f7"/>
-<text x="713.58" y="304.34" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">97</text>
+<rect x="685.79" y="362.26" width="55.58" height="25.74" fill="#388bfd"/>
+<rect x="685.79" y="345.88" width="55.58" height="16.38" fill="#3fb950"/>
+<rect x="685.79" y="311.56" width="55.58" height="34.32" fill="#a371f7"/>
+<text x="713.58" y="303.56" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">98</text>
 <text x="713.58" y="413" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">Nov*</text>
 <text x="778" y="436" font-size="11" fill="#8b949e" font-weight="400" text-anchor="end">*Nov is in progress</text>
 <path d="M22 450H778" stroke="#30363d"/>
