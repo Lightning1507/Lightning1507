@@ -52,10 +52,10 @@ Alongside building apps, I enjoy competitive programming and exploring data stru
 
 <!-- activity:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/activity-dark-mobile-0b5caef1c2ad.svg" />
-  <source media="(max-width: 600px)" srcset="assets/activity-light-mobile-0b357347cdbb.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark-e21d83f7af01.svg" />
-  <img src="assets/activity-light-a2cc755ba247.svg" alt="GitHub activity: annual totals and six monthly columns stacked by commits, opened PRs and reviewed PRs. Current month is in progress. Expand Activity details below for all numbers." width="100%" />
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/activity-dark-mobile-139486b381a8.svg" />
+  <source media="(max-width: 600px)" srcset="assets/activity-light-mobile-0ce3e931fcae.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark-4941f53465c5.svg" />
+  <img src="assets/activity-light-7c5145b563e8.svg" alt="GitHub activity: annual totals and six monthly columns stacked by commits, opened PRs and reviewed PRs. Current month is in progress. Expand Activity details below for all numbers." width="100%" />
 </picture>
 
 <details>
@@ -65,7 +65,7 @@ Alongside building apps, I enjoy competitive programming and exploring data stru
 
 | Commits | PRs | Reviewed PRs | Issues |
 | :---: | :---: | :---: | :---: |
-| **356** | **135** | **104** | **2** |
+| **357** | **135** | **104** | **2** |
 
 | Month (UTC) | Commits | PRs | Reviewed PRs |
 | :--- | ---: | ---: | ---: |
@@ -74,11 +74,11 @@ Alongside building apps, I enjoy competitive programming and exploring data stru
 | 2026-08 | 36 | 19 | 0 |
 | 2026-09 | 2 | 0 | 0 |
 | 2026-10 | 6 | 2 | 6 |
-| 2026-11 (in progress) | 37 | 21 | 44 |
+| 2026-11 (in progress) | 38 | 21 | 44 |
 
 </details>
 
-<sub>2026 · Public repositories · Updated 16 Nov, 04:00 UTC · [About these counts](docs/activity.md) · [Data](data/activity.json)</sub>
+<sub>2026 · Public repositories · Updated 16 Nov, 09:41 UTC · [About these counts](docs/activity.md) · [Data](data/activity.json)</sub>
 <!-- activity:end -->
 
 [Pull requests](https://github.com/pulls?q=is%3Apr+author%3ALightning1507+is%3Apublic) · [Reviews](https://github.com/pulls?q=is%3Apr+reviewed-by%3ALightning1507+-author%3ALightning1507+is%3Apublic) · [Repositories](https://github.com/Lightning1507?tab=repositories)
