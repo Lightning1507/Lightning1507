@@ -50,8 +50,6 @@ Alongside building apps, I enjoy competitive programming and exploring data stru
 - **CoLearnia:** real-time session behavior and integration testing.
 - **KPI Buddy:** connecting the employee mobile experience to backend APIs, with task context and personal skills.
 
-## GitHub activity
-
 <!-- activity:start -->
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/activity-dark-mobile-0b5caef1c2ad.svg" />
