@@ -2,6 +2,8 @@
 
 HUST student working on **web and mobile apps**, with projects in Java, Python and native Windows development as well.
 
+Alongside building apps, I enjoy competitive programming and exploring data structures and algorithms.
+
 ## Technologies I've worked with
 
 **Languages**
