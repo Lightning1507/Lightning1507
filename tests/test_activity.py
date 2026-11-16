@@ -102,7 +102,8 @@ class ActivityTests(unittest.TestCase):
             self.assertTrue(updated.startswith("# Lightning\nMy introduction.\n"))
             self.assertTrue(updated.endswith("\nMy projects.\n"))
             self.assertNotIn("old counts", updated)
-            self.assertIn("**7** commits", updated)
+            self.assertIn("| Commits | PRs | Reviewed PRs | Issues |", updated)
+            self.assertIn("| **7** | **7** | **7** | **7** |", updated)
 
     def test_missing_or_duplicate_markers_preserve_both_outputs(self):
         for content in ["No marker", "<!-- activity:start -->", "<!-- activity:end -->",

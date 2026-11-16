@@ -167,8 +167,10 @@ def render_activity(snapshot):
     counts = snapshot["metrics"]
     return (
         f"**This year · {year}**\n\n"
-        f"**{counts['commits']:,}** commits · **{counts['pull_requests']:,}** pull requests · "
-        f"**{counts['reviewed_prs']:,}** reviewed PRs · **{counts['issues']:,}** issues\n\n"
+        "| Commits | PRs | Reviewed PRs | Issues |\n"
+        "| :---: | :---: | :---: | :---: |\n"
+        f"| **{counts['commits']:,}** | **{counts['pull_requests']:,}** | "
+        f"**{counts['reviewed_prs']:,}** | **{counts['issues']:,}** |\n\n"
         '<picture>\n'
         '  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/activity-dark-mobile.svg" />\n'
         '  <source media="(max-width: 600px)" srcset="assets/activity-light-mobile.svg" />\n'

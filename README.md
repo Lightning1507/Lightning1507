@@ -55,7 +55,9 @@ Alongside building apps, I enjoy competitive programming and exploring data stru
 <!-- activity:start -->
 **This year · 2026**
 
-**350** commits · **135** pull requests · **104** reviewed PRs · **2** issues
+| Commits | PRs | Reviewed PRs | Issues |
+| :---: | :---: | :---: | :---: |
+| **350** | **135** | **104** | **2** |
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/activity-dark-mobile.svg" />
