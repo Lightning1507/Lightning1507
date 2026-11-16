@@ -1,6 +1,7 @@
 """Update the README's annual public-contribution summary using GitHub GraphQL."""
 
 import argparse
+import hashlib
 import json
 import math
 import os
@@ -174,12 +175,15 @@ def render_activity(snapshot):
     month = MONTHS[updated.month - 1]
     date = f"{updated.day} {month}, {updated:%H:%M} UTC"
     counts = snapshot["metrics"]
+    def panel_url(theme, mobile=False):
+        digest = hashlib.sha256(render_panel(snapshot, theme, mobile).encode("utf-8")).hexdigest()[:12]
+        return f"assets/activity-{theme}{'-mobile' if mobile else ''}.svg?v={digest}"
     return (
         '<picture>\n'
-        '  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/activity-dark-mobile.svg" />\n'
-        '  <source media="(max-width: 600px)" srcset="assets/activity-light-mobile.svg" />\n'
-        '  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />\n'
-        '  <img src="assets/activity-light.svg" alt="GitHub activity: annual totals and six monthly columns stacked by commits, opened PRs and reviewed PRs. Current month is in progress. Expand Activity details below for all numbers." width="100%" />\n'
+        f'  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="{panel_url("dark", True)}" />\n'
+        f'  <source media="(max-width: 600px)" srcset="{panel_url("light", True)}" />\n'
+        f'  <source media="(prefers-color-scheme: dark)" srcset="{panel_url("dark")}" />\n'
+        f'  <img src="{panel_url("light")}" alt="GitHub activity: annual totals and six monthly columns stacked by commits, opened PRs and reviewed PRs. Current month is in progress. Expand Activity details below for all numbers." width="100%" />\n'
         '</picture>\n\n'
         '<details>\n<summary>Activity details and data</summary>\n\n'
         f"**This year · {year}**\n\n"
