@@ -2,74 +2,74 @@
   "username": "Lightning1507",
   "scope": "public repositories only",
   "period_start": "2026-01-01T00:00:00Z",
-  "period_end": "2026-11-16T03:47:39Z",
-  "updated_at": "2026-11-16T03:47:39Z",
+  "period_end": "2026-11-16T03:53:15Z",
+  "updated_at": "2026-11-16T03:53:15Z",
   "metrics": {
     "commits": 351,
     "pull_requests": 135,
     "issues": 2,
     "reviewed_prs": 104
   },
-  "weeks": [
+  "months": [
     {
-      "start": "2026-08-24T00:00:00Z",
-      "end": "2026-08-30T23:59:59Z",
-      "commits": 0
+      "start": "2026-06-01T00:00:00Z",
+      "end": "2026-06-30T23:59:59Z",
+      "metrics": {
+        "commits": 93,
+        "pull_requests": 34,
+        "reviewed_prs": 15
+      },
+      "partial": false
     },
     {
-      "start": "2026-08-31T00:00:00Z",
-      "end": "2026-09-06T23:59:59Z",
-      "commits": 0
+      "start": "2026-07-01T00:00:00Z",
+      "end": "2026-07-31T23:59:59Z",
+      "metrics": {
+        "commits": 24,
+        "pull_requests": 11,
+        "reviewed_prs": 0
+      },
+      "partial": false
     },
     {
-      "start": "2026-09-07T00:00:00Z",
-      "end": "2026-09-13T23:59:59Z",
-      "commits": 0
+      "start": "2026-08-01T00:00:00Z",
+      "end": "2026-08-31T23:59:59Z",
+      "metrics": {
+        "commits": 36,
+        "pull_requests": 19,
+        "reviewed_prs": 0
+      },
+      "partial": false
     },
     {
-      "start": "2026-09-14T00:00:00Z",
-      "end": "2026-09-20T23:59:59Z",
-      "commits": 1
+      "start": "2026-09-01T00:00:00Z",
+      "end": "2026-09-30T23:59:59Z",
+      "metrics": {
+        "commits": 2,
+        "pull_requests": 0,
+        "reviewed_prs": 0
+      },
+      "partial": false
     },
     {
-      "start": "2026-09-21T00:00:00Z",
-      "end": "2026-09-27T23:59:59Z",
-      "commits": 1
+      "start": "2026-10-01T00:00:00Z",
+      "end": "2026-10-31T23:59:59Z",
+      "metrics": {
+        "commits": 6,
+        "pull_requests": 2,
+        "reviewed_prs": 6
+      },
+      "partial": false
     },
     {
-      "start": "2026-09-28T00:00:00Z",
-      "end": "2026-10-04T23:59:59Z",
-      "commits": 0
-    },
-    {
-      "start": "2026-10-05T00:00:00Z",
-      "end": "2026-10-11T23:59:59Z",
-      "commits": 0
-    },
-    {
-      "start": "2026-10-12T00:00:00Z",
-      "end": "2026-10-18T23:59:59Z",
-      "commits": 0
-    },
-    {
-      "start": "2026-10-19T00:00:00Z",
-      "end": "2026-10-25T23:59:59Z",
-      "commits": 6
-    },
-    {
-      "start": "2026-10-26T00:00:00Z",
-      "end": "2026-11-01T23:59:59Z",
-      "commits": 0
-    },
-    {
-      "start": "2026-11-02T00:00:00Z",
-      "end": "2026-11-08T23:59:59Z",
-      "commits": 6
-    },
-    {
-      "start": "2026-11-09T00:00:00Z",
-      "end": "2026-11-15T23:59:59Z",
-      "commits": 18
+      "start": "2026-11-01T00:00:00Z",
+      "end": "2026-11-16T03:53:15Z",
+      "metrics": {
+        "commits": 32,
+        "pull_requests": 21,
+        "reviewed_prs": 44
+      },
+      "partial": true
     }
   ],
   "extras": {

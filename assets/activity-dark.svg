@@ -1,61 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
-<title id="title">Public GitHub activity: 12 completed weeks</title>
-<desc id="desc">2026-08-24: 0 commits; 2026-08-31: 0 commits; 2026-09-07: 0 commits; 2026-09-14: 1 commits; 2026-09-21: 1 commits; 2026-09-28: 0 commits; 2026-10-05: 0 commits; 2026-10-12: 0 commits; 2026-10-19: 6 commits; 2026-10-26: 0 commits; 2026-11-02: 6 commits; 2026-11-09: 18 commits. PRs opened this year now merged: 108 of 135. Public repositories contributed to this year: 12.</desc>
-<rect x=".5" y=".5" width="799" height="399" rx="8" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="550" viewBox="0 0 800 550" role="img" aria-labelledby="title desc">
+<title id="title">GitHub activity: annual totals and 6 months of public contributions</title>
+<desc id="desc">2026-06: 93 commits, 34 opened PRs, 15 reviewed PRs; 2026-07: 24 commits, 11 opened PRs, 0 reviewed PRs; 2026-08: 36 commits, 19 opened PRs, 0 reviewed PRs; 2026-09: 2 commits, 0 opened PRs, 0 reviewed PRs; 2026-10: 6 commits, 2 opened PRs, 6 reviewed PRs; 2026-11: 32 commits, 21 opened PRs, 44 reviewed PRs. Current month in progress. Annual merged PRs: 108 of 135. Public repos contributed to this year: 12.</desc>
+<rect x=".5" y=".5" width="799" height="549" rx="8" fill="#0d1117" stroke="#30363d"/>
 <g font-family="Segoe UI,Arial,sans-serif">
-<text x="25" y="33" font-size="19" fill="#e6edf3" font-weight="600" text-anchor="start">Commit contributions</text>
-<text x="25" y="57" font-size="13" fill="#8b949e" font-weight="400" text-anchor="start">12 completed weeks · 24 Aug – 15 Nov</text>
-<path d="M45 244.0H774" stroke="#21262d"/>
-<text x="37" y="248.0" font-size="12" fill="#8b949e" font-weight="400" text-anchor="end">0</text>
-<path d="M45 205.5H774" stroke="#21262d"/>
-<text x="37" y="209.5" font-size="12" fill="#8b949e" font-weight="400" text-anchor="end">5</text>
-<path d="M45 167.0H774" stroke="#21262d"/>
-<text x="37" y="171.0" font-size="12" fill="#8b949e" font-weight="400" text-anchor="end">10</text>
-<path d="M45 128.5H774" stroke="#21262d"/>
-<text x="37" y="132.5" font-size="12" fill="#8b949e" font-weight="400" text-anchor="end">15</text>
-<path d="M45 90.0H774" stroke="#21262d"/>
-<text x="37" y="94.0" font-size="12" fill="#8b949e" font-weight="400" text-anchor="end">20</text>
-<rect x="58.97" y="244.00" width="32.80" height="0.00" rx="1.5" fill="#2964a6"/>
-<path d="M58.97 244h32.80" stroke="#8b949e" stroke-width="1.5"/>
-<text x="75.38" y="236.0" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">0</text>
-<text x="75.38" y="269" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">24 Aug</text>
-<rect x="119.72" y="244.00" width="32.80" height="0.00" rx="1.5" fill="#2964a6"/>
-<path d="M119.72 244h32.80" stroke="#8b949e" stroke-width="1.5"/>
-<text x="136.12" y="236.0" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">0</text>
-<rect x="180.47" y="244.00" width="32.80" height="0.00" rx="1.5" fill="#2964a6"/>
-<path d="M180.47 244h32.80" stroke="#8b949e" stroke-width="1.5"/>
-<text x="196.88" y="236.0" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">0</text>
-<rect x="241.22" y="236.30" width="32.80" height="7.70" rx="1.5" fill="#2964a6"/>
-<text x="257.62" y="228.3" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">1</text>
-<rect x="301.97" y="236.30" width="32.80" height="7.70" rx="1.5" fill="#2964a6"/>
-<text x="318.38" y="228.3" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">1</text>
-<text x="318.38" y="269" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">21 Sep</text>
-<rect x="362.72" y="244.00" width="32.80" height="0.00" rx="1.5" fill="#2964a6"/>
-<path d="M362.72 244h32.80" stroke="#8b949e" stroke-width="1.5"/>
-<text x="379.12" y="236.0" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">0</text>
-<rect x="423.47" y="244.00" width="32.80" height="0.00" rx="1.5" fill="#2964a6"/>
-<path d="M423.47 244h32.80" stroke="#8b949e" stroke-width="1.5"/>
-<text x="439.88" y="236.0" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">0</text>
-<rect x="484.22" y="244.00" width="32.80" height="0.00" rx="1.5" fill="#2964a6"/>
-<path d="M484.22 244h32.80" stroke="#8b949e" stroke-width="1.5"/>
-<text x="500.62" y="236.0" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">0</text>
-<rect x="544.97" y="197.80" width="32.80" height="46.20" rx="1.5" fill="#2964a6"/>
-<text x="561.38" y="189.8" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">6</text>
-<text x="561.38" y="269" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">19 Oct</text>
-<rect x="605.72" y="244.00" width="32.80" height="0.00" rx="1.5" fill="#2964a6"/>
-<path d="M605.72 244h32.80" stroke="#8b949e" stroke-width="1.5"/>
-<text x="622.12" y="236.0" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">0</text>
-<rect x="666.47" y="197.80" width="32.80" height="46.20" rx="1.5" fill="#2964a6"/>
-<text x="682.88" y="189.8" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">6</text>
-<rect x="727.22" y="105.40" width="32.80" height="138.60" rx="1.5" fill="#388bfd"/>
-<text x="743.62" y="97.4" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">18</text>
-<text x="743.62" y="269" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">9 Nov</text>
-<path d="M22 287H778" stroke="#30363d"/>
-<text x="22" y="313" font-size="13" fill="#8b949e" font-weight="400" text-anchor="start">This year's PRs now merged</text>
-<text x="435" y="313" font-size="13" fill="#8b949e" font-weight="400" text-anchor="start">Repos contributed to</text>
-<text x="22" y="341" font-size="22" fill="#e6edf3" font-weight="600" text-anchor="start">108 / 135</text>
-<text x="435" y="341" font-size="22" fill="#e6edf3" font-weight="600" text-anchor="start">12</text>
-<rect x="22" y="353" width="235" height="4" rx="2" fill="#21262d"/>
-<rect x="22" y="353" width="188.00" height="4" rx="2" fill="#388bfd"/>
-<text x="22" y="384" font-size="11" fill="#8b949e" font-weight="400" text-anchor="start">Public repositories · Extra metrics: 2026 year to date</text>
+<text x="26" y="35" font-size="21" fill="#e6edf3" font-weight="600" text-anchor="start">GitHub activity</text>
+<text x="778" y="35" font-size="13" fill="#8b949e" font-weight="400" text-anchor="end">2026 · Public only</text>
+<text x="26" y="93" font-size="32" fill="#e6edf3" font-weight="600" text-anchor="start">351</text>
+<text x="26" y="115" font-size="13" fill="#8b949e" font-weight="400" text-anchor="start">Commits</text>
+<text x="219" y="93" font-size="32" fill="#e6edf3" font-weight="600" text-anchor="start">135</text>
+<text x="219" y="115" font-size="13" fill="#8b949e" font-weight="400" text-anchor="start">Pull requests</text>
+<text x="412" y="93" font-size="32" fill="#e6edf3" font-weight="600" text-anchor="start">104</text>
+<text x="412" y="115" font-size="13" fill="#8b949e" font-weight="400" text-anchor="start">Reviewed PRs</text>
+<text x="605" y="93" font-size="32" fill="#e6edf3" font-weight="600" text-anchor="start">2</text>
+<text x="605" y="115" font-size="13" fill="#8b949e" font-weight="400" text-anchor="start">Issues opened</text>
+<path d="M22 142H778" stroke="#30363d"/>
+<text x="26" y="174" font-size="16" fill="#e6edf3" font-weight="600" text-anchor="start">Contributions · last 6 months</text>
+<text x="774" y="174" font-size="12" fill="#8b949e" font-weight="400" text-anchor="end">Jun 2026 – Nov 2026</text>
+<rect x="26" y="193" width="8" height="8" rx="1" fill="#388bfd"/>
+<text x="40" y="202" font-size="12" fill="#8b949e" font-weight="400" text-anchor="start">Commits</text>
+<rect x="144" y="193" width="8" height="8" rx="1" fill="#3fb950"/>
+<text x="158" y="202" font-size="12" fill="#8b949e" font-weight="400" text-anchor="start">PRs opened</text>
+<rect x="286" y="193" width="8" height="8" rx="1" fill="#a371f7"/>
+<text x="300" y="202" font-size="12" fill="#8b949e" font-weight="400" text-anchor="start">Reviewed PRs</text>
+<path d="M49 388.0H774" stroke="#21262d"/>
+<text x="41" y="392.0" font-size="11" fill="#8b949e" font-weight="400" text-anchor="end">0</text>
+<path d="M49 349.0H774" stroke="#21262d"/>
+<text x="41" y="353.0" font-size="11" fill="#8b949e" font-weight="400" text-anchor="end">50</text>
+<path d="M49 310.0H774" stroke="#21262d"/>
+<text x="41" y="314.0" font-size="11" fill="#8b949e" font-weight="400" text-anchor="end">100</text>
+<path d="M49 271.0H774" stroke="#21262d"/>
+<text x="41" y="275.0" font-size="11" fill="#8b949e" font-weight="400" text-anchor="end">150</text>
+<path d="M49 232.0H774" stroke="#21262d"/>
+<text x="41" y="236.0" font-size="11" fill="#8b949e" font-weight="400" text-anchor="end">200</text>
+<rect x="81.62" y="315.46" width="55.58" height="72.54" fill="#388bfd"/>
+<rect x="81.62" y="288.94" width="55.58" height="26.52" fill="#3fb950"/>
+<rect x="81.62" y="277.24" width="55.58" height="11.70" fill="#a371f7"/>
+<text x="109.42" y="269.24" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">142</text>
+<text x="109.42" y="413" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">Jun</text>
+<rect x="202.46" y="369.28" width="55.58" height="18.72" fill="#388bfd"/>
+<rect x="202.46" y="360.70" width="55.58" height="8.58" fill="#3fb950"/>
+<rect x="202.46" y="360.70" width="55.58" height="0.00" fill="#a371f7"/>
+<text x="230.25" y="352.7" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">35</text>
+<text x="230.25" y="413" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">Jul</text>
+<rect x="323.29" y="359.92" width="55.58" height="28.08" fill="#388bfd"/>
+<rect x="323.29" y="345.10" width="55.58" height="14.82" fill="#3fb950"/>
+<rect x="323.29" y="345.10" width="55.58" height="0.00" fill="#a371f7"/>
+<text x="351.08" y="337.1" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">55</text>
+<text x="351.08" y="413" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">Aug</text>
+<rect x="444.12" y="386.44" width="55.58" height="1.56" fill="#388bfd"/>
+<rect x="444.12" y="386.44" width="55.58" height="0.00" fill="#3fb950"/>
+<rect x="444.12" y="386.44" width="55.58" height="0.00" fill="#a371f7"/>
+<text x="471.92" y="378.44" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">2</text>
+<text x="471.92" y="413" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">Sep</text>
+<rect x="564.96" y="383.32" width="55.58" height="4.68" fill="#388bfd"/>
+<rect x="564.96" y="381.76" width="55.58" height="1.56" fill="#3fb950"/>
+<rect x="564.96" y="377.08" width="55.58" height="4.68" fill="#a371f7"/>
+<text x="592.75" y="369.08" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">14</text>
+<text x="592.75" y="413" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">Oct</text>
+<rect x="685.79" y="363.04" width="55.58" height="24.96" fill="#388bfd"/>
+<rect x="685.79" y="346.66" width="55.58" height="16.38" fill="#3fb950"/>
+<rect x="685.79" y="312.34" width="55.58" height="34.32" fill="#a371f7"/>
+<text x="713.58" y="304.34" font-size="12" fill="#e6edf3" font-weight="400" text-anchor="middle">97</text>
+<text x="713.58" y="413" font-size="12" fill="#8b949e" font-weight="400" text-anchor="middle">Nov*</text>
+<text x="778" y="436" font-size="11" fill="#8b949e" font-weight="400" text-anchor="end">*Nov is in progress</text>
+<path d="M22 450H778" stroke="#30363d"/>
+<text x="22" y="475" font-size="13" fill="#8b949e" font-weight="400" text-anchor="start">This year's PRs now merged</text>
+<text x="435" y="475" font-size="13" fill="#8b949e" font-weight="400" text-anchor="start">Repos contributed to</text>
+<text x="22" y="503" font-size="22" fill="#e6edf3" font-weight="600" text-anchor="start">108 / 135</text>
+<text x="435" y="503" font-size="22" fill="#e6edf3" font-weight="600" text-anchor="start">12</text>
+<rect x="22" y="516" width="235" height="4" rx="2" fill="#21262d"/>
+<rect x="22" y="516" width="188.00" height="4" rx="2" fill="#388bfd"/>
+<path d="M22 528H778" stroke="#30363d"/>
+<text x="22" y="543" font-size="10" fill="#8b949e" font-weight="400" text-anchor="start">Totals: Jan 1 – 16 Nov 2026 · Public repositories</text>
 </g></svg>

@@ -1,6 +1,6 @@
 # GitHub activity
 
-The text summary shows **current-calendar-year contributions to public repositories**,
+The panel's large totals show **current-calendar-year contributions to public repositories**,
 from January 1 at 00:00 UTC through the displayed update time.
 It uses GitHub’s GraphQL `contributionsCollection`, grouped by repository,
 and excludes private repositories before adding up the counts.
@@ -14,11 +14,20 @@ and excludes private repositories before adding up the counts.
 
 ## Activity panel
 
-The bar chart covers the **12 most recent completed UTC weeks**, Monday 00:00:00
-through Sunday 23:59:59. The current partial week is excluded so it is not compared
-with full weeks. Weekly commit counts follow GitHub's contribution rules and are
-filtered to public repositories. A mark at the baseline represents a real zero.
-The chart period is separate from the annual text totals and can cross a year boundary.
+The stacked chart covers **six calendar months including the current month**, in UTC.
+Each column has three directly named series: commit contributions, opened PRs, and
+reviewed PRs. The current month ends at the update time and is marked with an asterisk
+and **in progress**. Earlier months cover their full calendar period. Month boundaries
+do not overlap and follow real month lengths, including leap years. A baseline mark
+represents a real zero, not unavailable data. The chart period is separate from the
+annual totals and can cross a year boundary.
+
+Monthly counts use the same public-repository filtering and contribution rules as
+the annual counts. Reviewed PRs are distinct within each period: reviewing the same
+PR in two different months can contribute to both monthly columns but only once
+in the annual reviewed-PR count. Monthly reviewed-PR counts therefore need not sum
+to the annual number. Stacked height counts those recorded activities; it does not
+measure effort, productivity or code quality.
 
 The two extra metrics use the current calendar year:
 
@@ -32,13 +41,15 @@ The two extra metrics use the current calendar year:
   those categories. It includes collaboration on other people's repositories and
   is not a count of repositories owned by the user.
 
-The chart has light/dark and desktop/mobile SVG variants selected using a native
-`picture` element. The smaller layout reduces date labels and omits numbers above
-individual bars. The annual totals remain actual Markdown text; SVG descriptions
-and the linked [aggregate data](../data/activity.json) provide the chart values.
+The entire panel has light/dark and desktop/mobile SVG variants selected using a native
+`picture` element. Mobile uses a two-by-two grid for the annual totals and omits
+numbers above bars. The **Activity details and data** disclosure below the image
+contains annual and monthly values as real Markdown tables. SVG descriptions and
+the linked [aggregate data](../data/activity.json) also provide the values. The
+visible panel is a single graphic, with no separate totals table above it.
 
 GitHub may take time to recognize new contributions. These counts describe activity;
-they are not measures of skill or project quality. The navigation links below the summary
+they are not measures of skill or project quality. The navigation links below the panel
 open public GitHub searches across all dates, so their totals can differ from this annual summary.
 
 ## Updates
@@ -51,7 +62,7 @@ The token has `contents: write` so the workflow can commit `README.md`,
 `activity:start` and `activity:end` HTML comments is replaced; the rest of the profile stays intact.
 The updater rejects missing, duplicated or reversed markers before changing either file.
 
-The updater makes one GraphQL request for annual counts, weekly counts, and PR searches.
+The updater makes one GraphQL request for annual counts, monthly counts, and PR searches.
 It requests counts for up to 100 repositories per metric and time period. If that limit
 is reached, it fails rather than silently presenting potentially incomplete totals.
 It also rejects API errors, missing fields and invalid counts. If fetching or validation
