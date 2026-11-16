@@ -53,9 +53,20 @@ Alongside building apps, I enjoy competitive programming and exploring data stru
 ## GitHub activity
 
 <!-- activity:start -->
-**343** commits · **135** pull requests · **104** reviewed PRs · **2** issues
+**This year · 2026**
 
-<sub>2026 · Public repositories · Updated 15 Nov, 19:21 UTC · [About these counts](docs/activity.md)</sub>
+**348** commits · **135** pull requests · **104** reviewed PRs · **2** issues
+
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/activity-dark-mobile.svg" />
+  <source media="(max-width: 600px)" srcset="assets/activity-light-mobile.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
+  <img src="assets/activity-light.svg" alt="Public commit contributions in the last 12 completed UTC weeks, plus annual merged PR and repository counts. Full numbers are available in the linked activity data." width="100%" />
+</picture>
+
+<sub>2026 · Public repositories · Updated 16 Nov, 03:39 UTC · [About these counts](docs/activity.md) · [Data](data/activity.json)</sub>
 <!-- activity:end -->
 
 [Pull requests](https://github.com/pulls?q=is%3Apr+author%3ALightning1507+is%3Apublic) · [Reviews](https://github.com/pulls?q=is%3Apr+reviewed-by%3ALightning1507+-author%3ALightning1507+is%3Apublic) · [Repositories](https://github.com/Lightning1507?tab=repositories)
+
+❤️ [@nqocdungg](https://github.com/nqocdungg)

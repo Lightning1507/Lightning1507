@@ -2,7 +2,7 @@ import copy
 import importlib.util
 import tempfile
 import unittest
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from unittest.mock import patch
 
@@ -15,13 +15,19 @@ SPEC.loader.exec_module(activity)
 NOW = datetime(2026, 11, 16, 2, 17, tzinfo=timezone.utc)
 
 
-def response():
-    return {"data": {"user": {"contributionsCollection": {
+def response(now=NOW):
+    user = {"contributionsCollection": {
         field: [
-            {"repository": {"isPrivate": False}, "contributions": {"totalCount": 7}},
-            {"repository": {"isPrivate": True}, "contributions": {"totalCount": 999}},
+            {"repository": {"id": "public-repo", "isPrivate": False}, "contributions": {"totalCount": 7}},
+            {"repository": {"id": "private-repo", "isPrivate": True}, "contributions": {"totalCount": 999}},
         ] for field in activity.FIELDS.values()
-    }}}}
+    }}
+    for i in range(12):
+        user[f"week{i}"] = {"commitContributionsByRepository": [
+            {"repository": {"id": "public-repo", "isPrivate": False}, "contributions": {"totalCount": 0}},
+            {"repository": {"id": "private-repo", "isPrivate": True}, "contributions": {"totalCount": 999}},
+        ]}
+    return {"data": {"user": user, "opened": {"issueCount": 7}, "merged": {"issueCount": 5}}}
 
 
 class ActivityTests(unittest.TestCase):
@@ -70,7 +76,7 @@ class ActivityTests(unittest.TestCase):
 
     def test_year_rollover_uses_utc(self):
         now = datetime(2027, 1, 1, 0, 1, tzinfo=timezone.utc)
-        snapshot = activity.build_snapshot(response(), "Lightning1507", now)
+        snapshot = activity.build_snapshot(response(now), "Lightning1507", now)
         self.assertEqual(snapshot["period_start"], "2027-01-01T00:00:00Z")
         self.assertIn("2027", activity.render_activity(snapshot))
 
@@ -117,10 +123,55 @@ class ActivityTests(unittest.TestCase):
         snapshot["scope"] = "all repositories"
         with self.assertRaises(ValueError):
             activity.validate_snapshot(snapshot)
+
         snapshot = activity.build_snapshot(response(), "Lightning1507", NOW)
         snapshot["username"] = '<script>alert(1)</script>'
         with self.assertRaises(ValueError):
             activity.validate_snapshot(snapshot)
+
+    def test_completed_weeks_are_utc_monday_to_sunday_without_overlap(self):
+        weeks = activity.completed_weeks(NOW)
+        self.assertEqual(len(weeks), 12)
+        self.assertEqual(activity.timestamp(weeks[-1][0]), "2026-11-09T00:00:00Z")
+        self.assertEqual(activity.timestamp(weeks[-1][1]), "2026-11-15T23:59:59Z")
+        for previous, following in zip(weeks, weeks[1:]):
+            self.assertEqual(previous[1] + timedelta(seconds=1), following[0])
+        # Sunday in UTC+7 is still part of the week that has not finished in UTC.
+        sunday = datetime(2026, 11, 15, 23, 30, tzinfo=timezone(timedelta(hours=7)))
+        self.assertEqual(activity.timestamp(activity.completed_weeks(sunday)[-1][1]), "2026-11-08T23:59:59Z")
+
+    def test_public_repository_union_deduplicates_across_metrics(self):
+        payload = response()
+        payload["data"]["user"]["contributionsCollection"]["issueContributionsByRepository"][0]["repository"]["id"] = "another-public-repo"
+        snapshot = activity.build_snapshot(payload, "Lightning1507", NOW)
+        self.assertEqual(snapshot["extras"]["public_repositories"], 2)
+        self.assertEqual(snapshot["extras"]["merged_pull_requests"], 5)
+        self.assertEqual(snapshot["extras"]["opened_pull_requests"], 7)
+        self.assertEqual(sum(w["commits"] for w in snapshot["weeks"]), 0)
+        self.assertNotIn("private-repo", str(snapshot))
+
+    def test_missing_week_or_invalid_merged_subset_is_rejected(self):
+        payloads=[]
+        payload=response(); del payload["data"]["user"]["week4"]; payloads.append(payload)
+        payload=response(); payload["data"]["merged"]["issueCount"]=8; payloads.append(payload)
+        payload=response(); payload["data"]["opened"]["issueCount"]=True; payloads.append(payload)
+        for index, payload in enumerate(payloads):
+            with self.subTest(case=index), self.assertRaises(ValueError):
+                activity.build_snapshot(payload, "Lightning1507", NOW)
+
+    def test_zero_values_render_valid_svg_and_numeric_accessible_text(self):
+        import xml.etree.ElementTree as ET
+        payload=response()
+        payload["data"]["opened"]["issueCount"]=0
+        payload["data"]["merged"]["issueCount"]=0
+        snapshot=activity.build_snapshot(payload, "Lightning1507", NOW)
+        for theme in ("light", "dark"):
+            for mobile in (False, True):
+                svg=activity.render_panel(snapshot, theme, mobile)
+                ET.fromstring(svg)
+                self.assertNotIn("nan", svg.lower())
+                self.assertIn("0 of 0", svg)
+                self.assertIn("12 completed weeks", svg)
 
 
 if __name__ == "__main__":

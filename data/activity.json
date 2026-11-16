@@ -2,12 +2,79 @@
   "username": "Lightning1507",
   "scope": "public repositories only",
   "period_start": "2026-01-01T00:00:00Z",
-  "period_end": "2026-11-15T19:21:50Z",
-  "updated_at": "2026-11-15T19:21:50Z",
+  "period_end": "2026-11-16T03:39:49Z",
+  "updated_at": "2026-11-16T03:39:49Z",
   "metrics": {
-    "commits": 343,
+    "commits": 348,
     "pull_requests": 135,
     "issues": 2,
     "reviewed_prs": 104
+  },
+  "weeks": [
+    {
+      "start": "2026-08-24T00:00:00Z",
+      "end": "2026-08-30T23:59:59Z",
+      "commits": 0
+    },
+    {
+      "start": "2026-08-31T00:00:00Z",
+      "end": "2026-09-06T23:59:59Z",
+      "commits": 0
+    },
+    {
+      "start": "2026-09-07T00:00:00Z",
+      "end": "2026-09-13T23:59:59Z",
+      "commits": 0
+    },
+    {
+      "start": "2026-09-14T00:00:00Z",
+      "end": "2026-09-20T23:59:59Z",
+      "commits": 1
+    },
+    {
+      "start": "2026-09-21T00:00:00Z",
+      "end": "2026-09-27T23:59:59Z",
+      "commits": 1
+    },
+    {
+      "start": "2026-09-28T00:00:00Z",
+      "end": "2026-10-04T23:59:59Z",
+      "commits": 0
+    },
+    {
+      "start": "2026-10-05T00:00:00Z",
+      "end": "2026-10-11T23:59:59Z",
+      "commits": 0
+    },
+    {
+      "start": "2026-10-12T00:00:00Z",
+      "end": "2026-10-18T23:59:59Z",
+      "commits": 0
+    },
+    {
+      "start": "2026-10-19T00:00:00Z",
+      "end": "2026-10-25T23:59:59Z",
+      "commits": 6
+    },
+    {
+      "start": "2026-10-26T00:00:00Z",
+      "end": "2026-11-01T23:59:59Z",
+      "commits": 0
+    },
+    {
+      "start": "2026-11-02T00:00:00Z",
+      "end": "2026-11-08T23:59:59Z",
+      "commits": 6
+    },
+    {
+      "start": "2026-11-09T00:00:00Z",
+      "end": "2026-11-15T23:59:59Z",
+      "commits": 18
+    }
+  ],
+  "extras": {
+    "public_repositories": 12,
+    "opened_pull_requests": 135,
+    "merged_pull_requests": 108
   }
 }
