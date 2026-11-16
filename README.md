@@ -1,20 +1,39 @@
 # Lightning
 
-HUST student working on **web and mobile apps**. Mostly TypeScript, React and Flutter, with some C++ on Windows.
+HUST student working on **web and mobile apps**, with projects in Java, Python and native Windows development as well.
 
-## Tech I use
+## Technologies I've worked with
+
+**Languages**
 
 <p>
-  <a href="https://www.typescriptlang.org/"><img src="assets/tech/typescript.svg" alt="TypeScript" title="TypeScript" width="40" height="40" /></a>&nbsp;&nbsp;
-  <a href="https://react.dev/"><img src="assets/tech/react.svg" alt="React" title="React" width="40" height="40" /></a>&nbsp;&nbsp;
-  <a href="https://flutter.dev/"><img src="assets/tech/flutter.svg" alt="Flutter" title="Flutter" width="40" height="40" /></a>&nbsp;&nbsp;
-  <a href="https://dart.dev/"><img src="assets/tech/dart.svg" alt="Dart" title="Dart" width="40" height="40" /></a>&nbsp;&nbsp;
-  <a href="https://isocpp.org/"><img src="assets/tech/cplusplus.svg" alt="C++" title="C++" width="40" height="40" /></a>
+  <img src="assets/tech/typescript.svg" alt="TypeScript" title="TypeScript" width="32" height="32" />&nbsp;
+  <img src="assets/tech/javascript.svg" alt="JavaScript" title="JavaScript" width="32" height="32" />&nbsp;
+  <img src="assets/tech/php.svg" alt="PHP" title="PHP" width="32" height="32" />&nbsp;
+  <img src="assets/tech/java.svg" alt="Java" title="Java" width="32" height="32" />&nbsp;
+  <img src="assets/tech/python.svg" alt="Python" title="Python" width="32" height="32" />&nbsp;
+  <img src="assets/tech/dart.svg" alt="Dart" title="Dart" width="32" height="32" />&nbsp;
+  <img src="assets/tech/cplusplus.svg" alt="C++" title="C++" width="32" height="32" />
 </p>
 
-**Web** &nbsp; TypeScript · React · Socket.IO · WebRTC<br>
-**Mobile** &nbsp; Flutter · Dart · Riverpod<br>
-**Windows** &nbsp; C++ · Win32 · Media Foundation
+**Frameworks & runtimes**
+
+<p>
+  <img src="assets/tech/react.svg" alt="React" title="React" width="32" height="32" />&nbsp;
+  <img src="assets/tech/nextjs.svg" alt="Next.js" title="Next.js" width="32" height="32" />&nbsp;
+  <img src="assets/tech/nodejs.svg" alt="Node.js" title="Node.js" width="32" height="32" />&nbsp;
+  <img src="assets/tech/nestjs.svg" alt="NestJS" title="NestJS" width="32" height="32" />&nbsp;
+  <img src="assets/tech/laravel.svg" alt="Laravel" title="Laravel" width="32" height="32" />&nbsp;
+  <img src="assets/tech/flutter.svg" alt="Flutter" title="Flutter" width="32" height="32" />&nbsp;
+  <img src="assets/tech/tailwindcss.svg" alt="Tailwind CSS" title="Tailwind CSS" width="32" height="32" />
+</p>
+
+**Backend & real-time** &nbsp; Express · Socket.IO · WebRTC<br>
+**Mobile** &nbsp; Flutter · Riverpod<br>
+**Databases** &nbsp; PostgreSQL · MySQL · MongoDB<br>
+**Python notebooks** &nbsp; NumPy · Matplotlib · Jupyter<br>
+**Desktop** &nbsp; JavaFX · Win32 · Media Foundation<br>
+**Tools** &nbsp; Git · Docker · GitHub Actions
 
 ## Projects
 
