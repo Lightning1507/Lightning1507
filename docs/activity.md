@@ -49,6 +49,8 @@ the linked [aggregate data](../data/activity.json) also provide the values. The
 visible panel is a single graphic, with no separate totals table above it.
 Image URLs include a hash of the generated SVG content so a changed panel does not
 reuse a stale cached image from the previous layout or data snapshot.
+These URLs use GitHub's raw content host directly because the repository `/raw/`
+redirect removes query parameters.
 
 GitHub may take time to recognize new contributions. These counts describe activity;
 they are not measures of skill or project quality. The navigation links below the panel

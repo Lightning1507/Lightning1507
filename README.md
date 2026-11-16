@@ -54,10 +54,10 @@ Alongside building apps, I enjoy competitive programming and exploring data stru
 
 <!-- activity:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/activity-dark-mobile.svg?v=1e5a71d9ba35" />
-  <source media="(max-width: 600px)" srcset="assets/activity-light-mobile.svg?v=21544fb30453" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg?v=254ae342670a" />
-  <img src="assets/activity-light.svg?v=2142dae4b278" alt="GitHub activity: annual totals and six monthly columns stacked by commits, opened PRs and reviewed PRs. Current month is in progress. Expand Activity details below for all numbers." width="100%" />
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/Lightning1507/Lightning1507/main/assets/activity-dark-mobile.svg?v=1e5a71d9ba35" />
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Lightning1507/Lightning1507/main/assets/activity-light-mobile.svg?v=21544fb30453" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Lightning1507/Lightning1507/main/assets/activity-dark.svg?v=254ae342670a" />
+  <img src="https://raw.githubusercontent.com/Lightning1507/Lightning1507/main/assets/activity-light.svg?v=2142dae4b278" alt="GitHub activity: annual totals and six monthly columns stacked by commits, opened PRs and reviewed PRs. Current month is in progress. Expand Activity details below for all numbers." width="100%" />
 </picture>
 
 <details>

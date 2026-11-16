@@ -177,7 +177,10 @@ def render_activity(snapshot):
     counts = snapshot["metrics"]
     def panel_url(theme, mobile=False):
         digest = hashlib.sha256(render_panel(snapshot, theme, mobile).encode("utf-8")).hexdigest()[:12]
-        return f"assets/activity-{theme}{'-mobile' if mobile else ''}.svg?v={digest}"
+        # GitHub's /raw/ redirect drops query parameters. Use the raw host directly
+        # so the content version survives and cached images cannot mask a new panel.
+        return (f"https://raw.githubusercontent.com/{snapshot['username']}/{snapshot['username']}/main/"
+                f"assets/activity-{theme}{'-mobile' if mobile else ''}.svg?v={digest}")
     return (
         '<picture>\n'
         f'  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="{panel_url("dark", True)}" />\n'
