@@ -52,10 +52,10 @@ Alongside building apps, I enjoy competitive programming and exploring data stru
 
 <!-- activity:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/activity-dark-mobile-1aa154002f5c.svg" />
-  <source media="(max-width: 600px)" srcset="assets/activity-light-mobile-b69cf9c29fb4.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark-354b1ea5a1a4.svg" />
-  <img src="assets/activity-light-fff04a356a0c.svg" alt="GitHub activity: annual totals and six monthly columns stacked by commits, opened PRs and reviewed PRs. Current month is in progress. Expand Activity details below for all numbers." width="100%" />
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/activity-dark-mobile-0844bfb62c8c.svg" />
+  <source media="(max-width: 600px)" srcset="assets/activity-light-mobile-a79ab08ccfad.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark-172bfe779a2a.svg" />
+  <img src="assets/activity-light-1fb25bbb2894.svg" alt="GitHub activity: annual totals and six monthly columns stacked by commits, opened PRs and reviewed PRs. Current month is in progress. Expand Activity details below for all numbers." width="100%" />
 </picture>
 
 <details>
@@ -78,7 +78,7 @@ Alongside building apps, I enjoy competitive programming and exploring data stru
 
 </details>
 
-<sub>2026 · Public repositories · Updated 19 Nov, 10:19 UTC · [About these counts](docs/activity.md) · [Data](data/activity.json)</sub>
+<sub>2026 · Public repositories · Updated 20 Nov, 10:00 UTC · [About these counts](docs/activity.md) · [Data](data/activity.json)</sub>
 <!-- activity:end -->
 
 [Pull requests](https://github.com/pulls?q=is%3Apr+author%3ALightning1507+is%3Apublic) · [Reviews](https://github.com/pulls?q=is%3Apr+reviewed-by%3ALightning1507+-author%3ALightning1507+is%3Apublic) · [Repositories](https://github.com/Lightning1507?tab=repositories)
