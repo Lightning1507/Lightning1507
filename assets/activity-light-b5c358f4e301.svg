@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="550" viewBox="0 0 800 550" role="img" aria-labelledby="title desc">
 <title id="title">GitHub activity: annual totals and 6 months of public contributions</title>
-<desc id="desc">2026-06: 93 commits, 34 opened PRs, 15 reviewed PRs; 2026-07: 24 commits, 11 opened PRs, 0 reviewed PRs; 2026-08: 36 commits, 19 opened PRs, 0 reviewed PRs; 2026-09: 2 commits, 0 opened PRs, 0 reviewed PRs; 2026-10: 6 commits, 2 opened PRs, 6 reviewed PRs; 2026-11: 44 commits, 24 opened PRs, 53 reviewed PRs. Current month in progress. Annual merged PRs: 111 of 138. Public repos contributed to this year: 12.</desc>
+<desc id="desc">2026-06: 93 commits, 34 opened PRs, 15 reviewed PRs; 2026-07: 24 commits, 11 opened PRs, 0 reviewed PRs; 2026-08: 36 commits, 19 opened PRs, 0 reviewed PRs; 2026-09: 2 commits, 0 opened PRs, 0 reviewed PRs; 2026-10: 6 commits, 2 opened PRs, 6 reviewed PRs; 2026-11: 44 commits, 24 opened PRs, 54 reviewed PRs. Current month in progress. Annual merged PRs: 111 of 138. Public repos contributed to this year: 12.</desc>
 <rect x=".5" y=".5" width="799" height="549" rx="8" fill="#ffffff" stroke="#d1d9e0"/>
 <g font-family="Segoe UI,Arial,sans-serif">
 <text x="26" y="35" font-size="21" fill="#1f2328" font-weight="600" text-anchor="start">GitHub activity</text>
@@ -9,7 +9,7 @@
 <text x="26" y="115" font-size="13" fill="#59636e" font-weight="400" text-anchor="start">Commits</text>
 <text x="219" y="93" font-size="32" fill="#1f2328" font-weight="600" text-anchor="start">138</text>
 <text x="219" y="115" font-size="13" fill="#59636e" font-weight="400" text-anchor="start">Pull requests</text>
-<text x="412" y="93" font-size="32" fill="#1f2328" font-weight="600" text-anchor="start">113</text>
+<text x="412" y="93" font-size="32" fill="#1f2328" font-weight="600" text-anchor="start">114</text>
 <text x="412" y="115" font-size="13" fill="#59636e" font-weight="400" text-anchor="start">Reviewed PRs</text>
 <text x="605" y="93" font-size="32" fill="#1f2328" font-weight="600" text-anchor="start">3</text>
 <text x="605" y="115" font-size="13" fill="#59636e" font-weight="400" text-anchor="start">Issues opened</text>
@@ -59,8 +59,8 @@
 <text x="592.75" y="413" font-size="12" fill="#59636e" font-weight="400" text-anchor="middle">Oct</text>
 <rect x="685.79" y="353.68" width="55.58" height="34.32" fill="#0969da"/>
 <rect x="685.79" y="334.96" width="55.58" height="18.72" fill="#1a7f37"/>
-<rect x="685.79" y="293.62" width="55.58" height="41.34" fill="#8250df"/>
-<text x="713.58" y="285.62" font-size="12" fill="#1f2328" font-weight="400" text-anchor="middle">121</text>
+<rect x="685.79" y="292.84" width="55.58" height="42.12" fill="#8250df"/>
+<text x="713.58" y="284.84" font-size="12" fill="#1f2328" font-weight="400" text-anchor="middle">122</text>
 <text x="713.58" y="413" font-size="12" fill="#59636e" font-weight="400" text-anchor="middle">Nov*</text>
 <text x="778" y="436" font-size="11" fill="#59636e" font-weight="400" text-anchor="end">*Nov is in progress</text>
 <path d="M22 450H778" stroke="#d1d9e0"/>
@@ -71,5 +71,5 @@
 <rect x="22" y="516" width="235" height="4" rx="2" fill="#eaeef2"/>
 <rect x="22" y="516" width="189.02" height="4" rx="2" fill="#0969da"/>
 <path d="M22 528H778" stroke="#d1d9e0"/>
-<text x="22" y="543" font-size="10" fill="#59636e" font-weight="400" text-anchor="start">Totals: Jan 1 – 24 Nov 2026 · Public repositories</text>
+<text x="22" y="543" font-size="10" fill="#59636e" font-weight="400" text-anchor="start">Totals: Jan 1 – 25 Nov 2026 · Public repositories</text>
 </g></svg>
