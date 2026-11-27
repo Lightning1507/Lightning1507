@@ -2,13 +2,13 @@
   "username": "Lightning1507",
   "scope": "public repositories only",
   "period_start": "2026-01-01T00:00:00Z",
-  "period_end": "2026-11-26T10:52:38Z",
-  "updated_at": "2026-11-26T10:52:38Z",
+  "period_end": "2026-11-27T10:50:44Z",
+  "updated_at": "2026-11-27T10:50:44Z",
   "metrics": {
     "commits": 367,
-    "pull_requests": 141,
+    "pull_requests": 144,
     "issues": 3,
-    "reviewed_prs": 118
+    "reviewed_prs": 120
   },
   "months": [
     {
@@ -63,18 +63,18 @@
     },
     {
       "start": "2026-11-01T00:00:00Z",
-      "end": "2026-11-26T10:52:38Z",
+      "end": "2026-11-27T10:50:44Z",
       "metrics": {
         "commits": 48,
-        "pull_requests": 27,
-        "reviewed_prs": 58
+        "pull_requests": 30,
+        "reviewed_prs": 60
       },
       "partial": true
     }
   ],
   "extras": {
     "public_repositories": 13,
-    "opened_pull_requests": 141,
+    "opened_pull_requests": 144,
     "merged_pull_requests": 114
   }
 }
